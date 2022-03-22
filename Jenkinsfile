@@ -47,8 +47,7 @@ pipeline {
                      }
                  AWS ("lightsail push-container-image --service-name container-train-1 --label train --image chesky1/train-schedule:latest")
                }
-             }
-           }
+            }
         }
-      }
+    }
 }
