@@ -45,7 +45,7 @@ pipeline {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
              AWS("--region=us-east-2")
                      }
-                 AWS ("lightsail push-container-image --service-name container-train-1 --label train --image chesky1/train-schedule:latest")
+                 AWS lightsail push-container-image --service-name container-train-1 --label train --image chesky1/train-schedule:latest
                }
             }
         }
