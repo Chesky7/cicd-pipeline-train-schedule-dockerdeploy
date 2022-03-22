@@ -43,7 +43,7 @@ pipeline {
                   input 'Deploy to Production?'
                     milestone(1)
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-             AWS("lightsail push-container-image --service-name container-train-1 --label train --image chesky1/train-schedule:latest")
+             AWS("--region=us-east-2 lightsail push-container-image --service-name container-train-1 --label train --image chesky1/train-schedule:latest")
                      }
                }
             }
