@@ -39,7 +39,7 @@ pipeline {
              steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                    script {
-                   sh 'aws lightsail create-container-service-deployment --service-name container-train-1 --cli-input-json file://lc.json'
+                   sh 'aws lightsail create-container-service-deployment --region us-east-1 --cli-input-json file://lc.json'
                             }
                        }
                   } 
