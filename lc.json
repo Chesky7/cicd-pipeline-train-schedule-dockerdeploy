@@ -1,8 +1,4 @@
 {
-  "location": {
-                "availabilityZone": "all",
-                "regionName": "us-east-1"
-            },
   "serviceName": "container-train-1",
   "containers": {
      "train": {
