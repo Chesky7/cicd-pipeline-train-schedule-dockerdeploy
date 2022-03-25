@@ -1,15 +1,15 @@
 {
-  "serviceName": "hello-world",
+  "serviceName": "container-train-1",
   "containers": {
-     "hello-world": {
-        "image": ":hello-world.hello-world.1",
+     "train": {
+        "image": "chesky1/train-schedule:latest",
         "ports": {
            "8080": "HTTP"
         }
      }
   },
   "publicEndpoint": {
-     "containerName": "hello-world",
+     "containerName": "train",
      "containerPort": 8080
   }
 }
