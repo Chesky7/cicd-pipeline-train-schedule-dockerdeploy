@@ -38,7 +38,7 @@ pipeline {
                 stage('DeployToProduction') {
                steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-             AWS("lightsail push-container-image --region us-east-1 --service-name container-train-1 --label train --image chesky1/train-schedule:latest")
+             AWS ("lightsail push-container-image --region us-east-1 --service-name container-train-1 --label train --image chesky1/train-schedule:latest")
                      }
                   } 
              }
