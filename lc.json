@@ -1,0 +1,15 @@
+{
+  "serviceName": "hello-world",
+  "containers": {
+     "hello-world": {
+        "image": ":hello-world.hello-world.1",
+        "ports": {
+           "8080": "HTTP"
+        }
+     }
+  },
+  "publicEndpoint": {
+     "containerName": "hello-world",
+     "containerPort": 8080
+  }
+}
