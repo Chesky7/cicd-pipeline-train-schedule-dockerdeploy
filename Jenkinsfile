@@ -17,7 +17,7 @@ pipeline {
                 script {
                     app = docker.build("chesky1/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8080)'
+                        sh 'echo $(curl localhost:80)'
                     }
                 }
             }
